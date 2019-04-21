@@ -79,6 +79,11 @@ public class Program {
             String surname = data.nextLine();
 
             int age = (int) fetchValue(data, "Please give your age", 105);
+            if (age < 18) {
+                System.out.println("You should have above 18 years old");
+                System.exit(1); // If verification doesn't succeed, logic should not progress
+            }
+
             double height = fetchValue(data, "Please give your height", 235);
             double weight = fetchValue(data, "Please give your weight", 495);
 
@@ -90,18 +95,9 @@ public class Program {
                     "\n height: " + height +
                     "\n weight: " + weight);
 
-            try {
-                if (age < 18) {
-                    System.out.println("You should have above 18 years old");
-                }
-                ;
-            } catch (Exception e) {
-                System.out.println("Something went wrong");
-            }
         }
 
         public static void passwordAccountRegisterUser() {
-
             Scanner password = new Scanner(System.in);
             String passwordRegisterAccount = password.nextLine();
             String testing = passwordRegisterAccount.replaceAll("[a-zA-Z0-9]", "*");
