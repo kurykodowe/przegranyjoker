@@ -35,7 +35,7 @@ public class Program {
         }
 
         System.out.println("Please press key and click enter to continue program");
-        String personelRegister = input.nextLine();
+        input.nextLine();
 
         System.out.println("Answer on questions");
         Log.questionsForRegisterAccount();
