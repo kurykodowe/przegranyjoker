@@ -78,55 +78,9 @@ public class Program {
             System.out.println("Please give surname");
             String surname = data.nextLine();
 
-            System.out.println("Please give your age");
-            int age = data.nextInt();
-            int ageRight = 105;
-            if (age < 105) {
-                System.out.println("Great!");
-            } else if (age > 105) {
-                System.out.println("You cannot have above 105 years");
-            } else {
-                System.out.println("Write your age");
-            }
-
-            while (age > ageRight) {
-                System.out.println("Please give your age");
-                age = data.nextInt();
-
-            }
-            System.out.println("Thank you :) ");
-
-            System.out.println("Please give your height");
-            double heightRight = 235;
-            double height = data.nextDouble();
-            if (height < 235) {
-                System.out.println("Great!");
-            } else if (height > 235) {
-                System.out.println("You cannot have above 235 ");
-            } else {
-                System.out.println("Write your height");
-            }
-            while (height > heightRight) {
-                System.out.println("Please give your age");
-                height = data.nextInt();
-
-            }
-
-            System.out.println("Please give your weight");
-            double weightRight = 495;
-            double weight = data.nextDouble();
-            if (weight < 405) {
-                System.out.println("Great!");
-            } else if (weight > 405) {
-                System.out.println("You cannot have above 405 ");
-            } else {
-                System.out.println("Write your weight");
-            }
-            while (weight > weightRight) {
-                System.out.println("Please give your age");
-                weight = data.nextInt();
-
-            }
+            int age = (int) fetchValue(data, "Please give your age", 105);
+            double height = fetchValue(data, "Please give your height", 235);
+            double weight = fetchValue(data, "Please give your weight", 495);
 
             System.out.println("Done, Congratulation your account is active");
 
@@ -157,6 +111,21 @@ public class Program {
         public static void saveAll() {
 
             System.out.println("Saving..");
+        }
+
+        private static double fetchValue(Scanner input, String instruction, double upperLimit) {
+            while (true) {
+                System.out.println(instruction);
+                double value = input.nextDouble();
+                if (value < 0) {
+                    System.out.println("Negative values not allowed");
+                } else if (value > upperLimit) {
+                    System.out.println("Maximum value allowed: " + upperLimit);
+                } else {
+                    System.out.println("Great!");
+                    return value;
+                }
+            }
         }
     }
 }
