@@ -1,3 +1,5 @@
+package pl.przegranyjoker;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -7,10 +9,8 @@ public class Program {
 
         Scanner input = new Scanner(System.in);
 
-        Log behaviour = new Log();
-
         System.out.println("Welcome, im bot ANDI and I want show you something here");
-        behaviour.chatBotQuestions("ANDI", "BOT", "System", "c22", 100);
+        Log.chatBotQuestions("ANDI", "BOT", "System", "c22", 100);
         System.out.println(" ");
         System.out.println("Hello my friend, I need your information to register account. Can you answer on question?(Y/N)");
         String yesOrNoQuestionRegister = input.nextLine();
@@ -38,10 +38,10 @@ public class Program {
         String personelRegister = input.nextLine();
 
         System.out.println("Answer on questions");
-        behaviour.questionsForRegisterAccount();
+        Log.questionsForRegisterAccount();
 
         System.out.println("Write your password for register account");
-        behaviour.passwordAccountRegisterUser();
+        Log.passwordAccountRegisterUser();
 
         System.out.println("Thank your for register account, now your data will save in file TXT");
 
@@ -51,7 +51,7 @@ public class Program {
             saveDataRegisterAccountUser.println("second line too working");
             saveDataRegisterAccountUser.println("third line to write something in note");
             saveDataRegisterAccountUser.close();
-            behaviour.saveAll();
+            Log.saveAll();
         } catch (Exception e) {
             System.out.println("Something went wrong");
         }
