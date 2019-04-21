@@ -10,7 +10,7 @@ public class Program {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome, im bot ANDI and I want show you something here");
-        Log.chatBotQuestions("ANDI", "BOT", "System", "c22", 100);
+        Log.chatBotQuestions("ANDI", "BOT", "System", "c22", 100); // What's the point?
         System.out.println(" ");
         System.out.println("Hello my friend, I need your information to register account. Can you answer on question?(Y/N)");
         String response = input.nextLine();
@@ -25,6 +25,7 @@ public class Program {
 
             if (response.equalsIgnoreCase("n")) {
                 System.out.println("Ok, See you later");
+                System.exit(0);
             } else if (response.equalsIgnoreCase("y")) {
                 System.out.println("Uff, Ok you can continue register");
             } else {
@@ -62,7 +63,7 @@ public class Program {
 
         public static void chatBotQuestions(String name, String surname, String username, String password, int age) {
             System.out.println(name + " " + surname + " " + age + " " + username + " " + password);
-            if (name == "ANDI") {
+            if ("ANDI".equals(name)) {
                 System.out.println("Start program..");
             } else {
                 System.out.println("Something went wrong..");
