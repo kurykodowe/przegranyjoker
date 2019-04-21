@@ -16,16 +16,16 @@ public class Program {
         String yesOrNoQuestionRegister = questionAccountsRegister.nextLine();
 
 
-        if (yesOrNoQuestionRegister.equals("y") || yesOrNoQuestionRegister.equals("Y")) {
+        if (yesOrNoQuestionRegister.equalsIgnoreCase("y")) {
             System.out.println("Accepted");
 
-        } else if (yesOrNoQuestionRegister.equals("n") || yesOrNoQuestionRegister.equals("N")) {
+        } else if (yesOrNoQuestionRegister.equalsIgnoreCase("n")) {
             System.out.println("Are you sure that you don't want register account here?(y/n)");
             String yesOrNoQuestionRegister2 = questionAccountsRegister.nextLine();
 
-            if (yesOrNoQuestionRegister2.equals("n") || yesOrNoQuestionRegister2.equals("N")) {
+            if (yesOrNoQuestionRegister2.equalsIgnoreCase("n")) {
                 System.out.println("Ok, See you later");
-            } else if (yesOrNoQuestionRegister2.equals("y") || yesOrNoQuestionRegister2.equals("Y")) {
+            } else if (yesOrNoQuestionRegister2.equalsIgnoreCase("y")) {
                 System.out.println("Uff, Ok you can continue register");
             } else {
                 System.out.println("Try again, you can write only Y/N");
