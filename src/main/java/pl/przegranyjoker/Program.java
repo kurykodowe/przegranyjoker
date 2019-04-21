@@ -5,7 +5,7 @@ public class Program {
 
     public static void main(String[] args) {
 
-        Scanner questionAccountsRegister = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         Log behaviour = new Log();
 
@@ -13,7 +13,7 @@ public class Program {
         behaviour.chatBotQuestions("ANDI", "BOT", "System", "c22", 100);
         System.out.println(" ");
         System.out.println("Hello my friend, I need your information to register account. Can you answer on question?(Y/N)");
-        String yesOrNoQuestionRegister = questionAccountsRegister.nextLine();
+        String yesOrNoQuestionRegister = input.nextLine();
 
 
         if (yesOrNoQuestionRegister.equalsIgnoreCase("y")) {
@@ -21,7 +21,7 @@ public class Program {
 
         } else if (yesOrNoQuestionRegister.equalsIgnoreCase("n")) {
             System.out.println("Are you sure that you don't want register account here?(y/n)");
-            String yesOrNoQuestionRegister2 = questionAccountsRegister.nextLine();
+            String yesOrNoQuestionRegister2 = input.nextLine();
 
             if (yesOrNoQuestionRegister2.equalsIgnoreCase("n")) {
                 System.out.println("Ok, See you later");
@@ -35,7 +35,7 @@ public class Program {
         }
 
         System.out.println("Please press key and click enter to continue program");
-        String personelRegister = questionAccountsRegister.nextLine();
+        String personelRegister = input.nextLine();
 
         System.out.println("Answer on questions");
         behaviour.questionsForRegisterAccount();
