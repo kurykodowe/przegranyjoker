@@ -13,19 +13,19 @@ public class Program {
         Log.chatBotQuestions("ANDI", "BOT", "System", "c22", 100);
         System.out.println(" ");
         System.out.println("Hello my friend, I need your information to register account. Can you answer on question?(Y/N)");
-        String yesOrNoQuestionRegister = input.nextLine();
+        String response = input.nextLine();
 
 
-        if (yesOrNoQuestionRegister.equalsIgnoreCase("y")) {
+        if (response.equalsIgnoreCase("y")) {
             System.out.println("Accepted");
 
-        } else if (yesOrNoQuestionRegister.equalsIgnoreCase("n")) {
+        } else if (response.equalsIgnoreCase("n")) {
             System.out.println("Are you sure that you don't want register account here?(y/n)");
-            String yesOrNoQuestionRegister2 = input.nextLine();
+            response = input.nextLine();
 
-            if (yesOrNoQuestionRegister2.equalsIgnoreCase("n")) {
+            if (response.equalsIgnoreCase("n")) {
                 System.out.println("Ok, See you later");
-            } else if (yesOrNoQuestionRegister2.equalsIgnoreCase("y")) {
+            } else if (response.equalsIgnoreCase("y")) {
                 System.out.println("Uff, Ok you can continue register");
             } else {
                 System.out.println("Try again, you can write only Y/N");
